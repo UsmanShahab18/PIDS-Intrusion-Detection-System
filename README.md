@@ -26,7 +26,7 @@ each raw alert into a plain-English explanation an analyst can act on.
 
 - 📡 **Live packet capture** with Scapy
 - 🧠 **Two-stage ML detection** (fast filter → detailed classifier)
-- 🤖 **Deep-learning models** (DNN / GNN) for harder cases
+- 🤖 **Deep-learning models** (DNN) for harder cases
 - 💬 **LLM-generated alert explanations** via Ollama (runs locally, no cloud)
 - 🕳️ **Zero-day / anomaly detection** for unseen attack patterns
 - 🔁 **On-the-fly model retraining** from newly labelled traffic
@@ -41,7 +41,7 @@ each raw alert into a plain-English explanation an analyst can act on.
 |-------|-----------|-----|
 | 1 | **Stage-1 — XGBoost** | Fast first pass: is this traffic suspicious at all? |
 | 2 | **Stage-2 — LightGBM** | Detailed multi-class attack classification |
-| 3 | **Deep Learning (Keras DNN / GNN)** | Extra accuracy on ambiguous flows |
+| 3 | **Deep Learning (Keras DNN)** | Extra accuracy on ambiguous flows |
 | 4 | **Zero-Day module** | Flags anomalies that don't match known classes |
 | 5 | **LLM Analyst (Ollama)** | Explains the alert in human language + suggests response |
 
