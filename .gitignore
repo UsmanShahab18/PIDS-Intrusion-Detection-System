@@ -1,0 +1,74 @@
+# =============================================================================
+# PIDS .gitignore  —  WHITELIST MODE
+# -----------------------------------------------------------------------------
+# Rule of thumb: ignore EVERYTHING at the project root, then re-allow ONLY the
+# two folders we want on GitHub (frontend + backend) plus this file and README.
+# This guarantees nothing sensitive is ever uploaded by accident:
+#   - Account_info.txt (plaintext passwords)   - venv/            - docs/
+#   - Attack_Files/ + attack_listener.py       - Frontend_Backup/ - *.png, *.txt
+# =============================================================================
+
+# 1) Ignore everything at the root level
+/*
+
+# 2) ...but keep these
+!/.gitignore
+!/README.md
+!/frontend
+!/backend
+
+# =============================================================================
+# Inside frontend/ and backend/, still skip the heavy / secret / generated stuff
+# =============================================================================
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+
+# --- Virtual environments ---
+venv/
+env/
+.venv/
+
+# --- Django ---
+*.log
+*.sqlite3
+db.sqlite3
+db.sqlite3-journal
+backend/staticfiles/
+backend/media/
+
+# --- Environment / secrets ---
+.env
+.env.local
+.env.*.local
+backend/.env
+
+# --- Node / React ---
+node_modules/
+frontend/build/
+frontend/dist/
+frontend/.eslintcache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- ML / DL models: KEEP the active model files so the project runs right
+#     after cloning. Only skip the backup snapshots and the Colab duplicates ---
+backend/ml_models/backups/
+backend/dl_models/backups/
+backend/Colab _Trained_files/
+
+# --- IDE / OS junk ---
+.claude/
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

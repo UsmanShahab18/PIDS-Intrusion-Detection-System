@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIDS - Network Intrusion Detection System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .status {
+            background: #2ecc71;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .card {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+            border-radius: 5px;
+        }
+        .endpoint {
+            background: #2c3e50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin: 5px 0;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 PIDS - Network Intrusion Detection System</h1>
+        
+        <div class="status">
+            ✅ Django Backend Server is Running Successfully!
+        </div>
+        
+        <div class="card">
+            <h2>📊 System Information</h2>
+            <p><strong>Backend URL:</strong> http://localhost:8000</p>
+            <p><strong>WebSocket URL:</strong> ws://localhost:8000/ws/packets/</p>
+            <p><strong>API Base URL:</strong> http://localhost:8000/api/</p>
+        </div>
+        
+        <div class="card">
+            <h2>🔗 Quick Links</h2>
+            <ul>
+                <li><a href="http://localhost:3000" target="_blank">📱 React Frontend (localhost:3000)</a></li>
+                <li><a href="/admin/" target="_blank">⚙️ Django Admin Panel</a></li>
+                <li><a href="/api/traffic/" target="_blank">📈 Traffic Logs API</a></li>
+                <li><a href="/api/" target="_blank">🔌 API Root</a></li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>🌐 WebSocket Endpoints</h2>
+            <div class="endpoint">ws://localhost:8000/ws/packets/</div>
+            <p>Connect to this endpoint for real-time traffic updates from the packet sniffer.</p>
+        </div>
+        
+        <div class="card">
+            <h2>🛠️ API Endpoints</h2>
+            <div class="endpoint">GET /api/traffic/</div>
+            <p>Retrieve traffic logs with ML predictions</p>
+            
+            <div class="endpoint">GET /api/traffic/&lt;id&gt;/</div>
+            <p>Get specific traffic log details</p>
+            
+            <div class="endpoint">GET /api/stats/</div>
+            <p>Get system statistics</p>
+        </div>
+        
+        <div class="card">
+            <h2>📡 How to Use</h2>
+            <ol>
+                <li>Start Django server: <code>python manage.py runserver</code></li>
+                <li>Start packet sniffer: <code>python manage.py start_sniffer</code></li>
+                <li>Open React frontend: <code>npm start</code> (in frontend folder)</li>
+                <li>Monitor real-time traffic on the dashboard</li>
+            </ol>
+        </div>
+        
+        <div class="card">
+            <h2>🔧 Troubleshooting</h2>
+            <ul>
+                <li><strong>No WebSocket data?</strong> Check if <code>start_sniffer</code> is running</li>
+                <li><strong>React not connecting?</strong> Ensure CORS is enabled in Django settings</li>
+                <li><strong>No packets captured?</strong> Run as Administrator and check network interface</li>
+            </ul>
+        </div>
+        
+        <footer style="margin-top: 30px; text-align: center; color: #7f8c8d;">
+            <p>PIDS - Final Year Project | Network Intrusion Detection with ML</p>
+        </footer>
+    </div>
+</body>
+</html>
